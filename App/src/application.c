@@ -74,22 +74,6 @@ void test_Rs485(void)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void TIM3_IRQHandler(void)
 {
 	if(TIM_GetITStatus(TIM3,TIM_IT_Update)!=RESET) 

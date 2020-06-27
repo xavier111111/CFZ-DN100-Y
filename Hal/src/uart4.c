@@ -81,7 +81,7 @@ void uart4_Init(void)
 	
 	USART_ClearFlag(UART4, USART_FLAG_TC |USART_FLAG_RXNE);
 	USART_ITConfig(UART4, USART_IT_IDLE, ENABLE);  //使用串口空闲中断
-	USART_ITConfig(UART4, USART_IT_TC, ENABLE);  //使用串口空闲中断
+	USART_ITConfig(UART4, USART_IT_TC, ENABLE);  //使用串口发送完成中断
 
 	while((DMA_GetCmdStatus(DMA1_Stream2) != DISABLE)&&((timeout--)>0));  //为0时可以配置DMA相关寄存器
 	
